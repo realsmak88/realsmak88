@@ -1,0 +1,18 @@
+---
+title: "Kamarel Ba"
+image: Kamarel.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://x.com/kamarely
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kamarel-ba-34794749/
+    - icon: github
+      text: Github
+      href: https://github.com/realsmak88
+---
+
+Dr Kamarel Ba is a researcher at ISRA/CRODT in Senegal. Dr Ba is currently working with two international projects: the tropical tunas’ tagging programme in the Atlantic Ocean in collaboration with ICCAT organization and the a project investigating the main demersal resources shared with Senegal’s neighboring countries. Using the tropical tunas’ tagging database, Kamarel analyzed the movements of the species, estimated the distances covered and the number of days at liberty of tagged fish. For the demersal resources, a sampling protocol were implemented to collect measurements of fish (total length, body weight, gonad weight), tissues samples (for genetic analyses) and otoliths samples. Kamarel was also a fellow of the GRÓ Fisheries Training Programme in Iceland, where his research work focused on data-limited methods and their application to black hakes stock shared by several countries (from Morocco to Senegal).

@@ -1,0 +1,9 @@
+---
+title: "Analysis of DHS data"
+author: "Kamarel Ba"
+date: "2025-03-04"
+categories: [code, analysis, r]
+image: "image.jpg"
+---
+
+This was a project using DHS data. You can find the project [here](https://demolandscapes.info/){target="_blank"}
