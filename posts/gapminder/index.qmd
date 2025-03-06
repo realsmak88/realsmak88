@@ -1,0 +1,8 @@
+---
+title: "Gapminder | Life Expectancy 2007"
+author: "Kamarel Ba"
+date: "2025-03-06"
+categories: [code, dashboard, r]
+---
+
+This is my fisrt dashboard made using Quarto by following [Kene David courses](https://thegraphcourses.org/courses/websites-and-dashboards-with-r/topics/dashboards-with-quarto/). You can find the dashboard [here](https://realsmak88.github.io/gapminder_dash/){target="_blank"}

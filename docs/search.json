@@ -4,7 +4,7 @@
     "href": "portfolio.html",
     "title": "My portfolio",
     "section": "",
-    "text": "Analysis of DHS data\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nr\n\n\n\n\n\n\n\n\n\nMar 4, 2025\n\n\nKamarel Ba\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\nKamarel Ba\n\n\n\n\n\n\nNo matching items"
+    "text": "Gapminder | Life Expectancy 2007\n\n\n\n\n\n\ncode\n\n\ndashboard\n\n\nr\n\n\n\n\n\n\n\n\n\nMar 6, 2025\n\n\nKamarel Ba\n\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of DHS data\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nr\n\n\n\n\n\n\n\n\n\nMar 4, 2025\n\n\nKamarel Ba\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\nKamarel Ba\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -26,5 +26,40 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/gapminder/index.html",
+    "href": "posts/gapminder/index.html",
+    "title": "Gapminder | Life Expectancy 2007",
+    "section": "",
+    "text": "This is my fisrt dashboard made using Quarto by following Kene David courses. You can find the dashboard here"
+  },
+  {
+    "objectID": "posts/gapminder/index.html#row-1",
+    "href": "posts/gapminder/index.html#row-1",
+    "title": "GAPMINDER | LIFE EXPECTANCIES 2007",
+    "section": "Row 1",
+    "text": "Row 1\n\nvalue_box(\n  title = \"Highest Life expectancy\",\n  value = highest_life_exp_value,\n  showcase = bsicons::bs_icon(\"heart\"),\n  theme = value_box_theme(bg = \"#518fd6\"),\n  p(paste0(\"(\",highest_life_exp_country,\")\")) # p() = paragraph (useful to put some text inside).\n)\n\n\n\n\n\n\nHighest Life expectancy\n82.6\n(Japan)\n\n\n\n\n\n\n\n\nvalue_box(\n  title = \"Lowest Life expectancy\",\n  value = lowest_life_exp_value,\n  showcase = bsicons::bs_icon(\"thermometer-low\"),\n  theme = value_box_theme(bg = \"#214773\"),\n  p(paste0(\"(\",lowest_life_exp_country,\")\")) # p() = paragraph (useful to put some text inside).\n)\n\n\n\n\n\n\n\nLowest Life expectancy\n39.6\n(Swaziland)\n\n\n\n\n\n\n\n\nvalue_box(\n  title = \"Average Life expectancy\",\n  value = average_life_exp_value,\n  showcase = bsicons::bs_icon(\"graph-up\"), # intersect\n  theme = value_box_theme(bg = \"#3477eb\")\n)\n\n\n\n\n\n\nAverage Life expectancy\n68.9"
+  },
+  {
+    "objectID": "posts/gapminder/index.html#row-2",
+    "href": "posts/gapminder/index.html#row-2",
+    "title": "GAPMINDER | LIFE EXPECTANCIES 2007",
+    "section": "Row 2",
+    "text": "Row 2\n\n\n\ngap_map_ggplotly\n\n\n\n\n\n\n\n\n\ntop_20_countries_ggplotly"
+  },
+  {
+    "objectID": "posts/gapminder/index.html#column-1",
+    "href": "posts/gapminder/index.html#column-1",
+    "title": "GAPMINDER | LIFE EXPECTANCIES 2007",
+    "section": "Column 1",
+    "text": "Column 1\n\ndata &lt;- gapminder %&gt;%\n  group_by(country) %&gt;%\n  reframe(lifeExp = list(lifeExp)) %&gt;%\n  mutate(boxplot = NA, sparkline = NA)\n\nreactable(data, defaultPageSize = 17, showPageSizeOptions = TRUE,\n          columns = list(\n  lifeExp = colDef(cell = function(values) {\n    sparkline(values, type = \"bar\", chartRangeMin = 0, chartRangeMax = max(gapminder$lifeExp))\n  }),\n  boxplot = colDef(cell = function(value, index) {\n    sparkline(data$lifeExp[[index]], type = \"box\")\n  }),\n  sparkline = colDef(cell = function(value, index) {\n    sparkline(data$lifeExp[[index]])\n  })\n))"
+  },
+  {
+    "objectID": "posts/gapminder/index.html#column-2",
+    "href": "posts/gapminder/index.html#column-2",
+    "title": "GAPMINDER | LIFE EXPECTANCIES 2007",
+    "section": "Column 2",
+    "text": "Column 2\n\nhtmltools::browsable(\n  tagList(\n    reactable(\n      gapminder,\n      defaultPageSize = 13,\n      showPageSizeOptions = TRUE,\n      elementId = \"gapminder-table\",\n      searchable = T, \n      filterable = T,\n  #     defaultColDef = colDef(footer = function(values) {\n  #   if (!is.numeric(values)) return()\n  #   sparkline(values, type = \"box\", width = 100, height = 30)\n  # })\n  ), \n    tags$button(bsicons::bs_icon(\"download\"), \n                \"Download as CSV\", \n                onclick = \"Reactable.downloadDataCSV('gapminder-table')\")\n  )\n)\n\n\n\n\n\n\nDownload as CSV"
   }
 ]
